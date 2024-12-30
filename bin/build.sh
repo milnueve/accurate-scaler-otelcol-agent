@@ -51,6 +51,8 @@ processors:
 exporters:
   # OTel Collector OTLP GRPC exporter.
   - gomod: go.opentelemetry.io/collector/exporter/otlpexporter v$BUILDER_VERSION
+  # OTel Collector OTLP HTTP exporter.
+  - gomod: go.opentelemetry.io/collector/exporter/otlphttpexporter v$BUILDER_VERSION
 EOF
 
 echo "Building AccurateScaler OTel Collector Agent"
