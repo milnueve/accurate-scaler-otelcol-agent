@@ -41,6 +41,8 @@ extensions:
   # See RFC 6479, section 4.4: https://datatracker.ietf.org/doc/html/rfc6749#section-4.4.
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/oauth2clientauthextension v$BUILDER_VERSION
 receivers:
+  # Receiver used to receive metrics via OTLP protocol (HTTP/gRPC).
+  - gomod: go.opentelemetry.io/collector/receiver/otlpreceiver v$BUILDER_VERSION
   # Receiver used to scrape Prometheus-compatible metrics' publishers.
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/receiver/prometheusreceiver v$BUILDER_VERSION
 processors:
